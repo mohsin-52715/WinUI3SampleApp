@@ -1,0 +1,3109 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 22,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "Default",
+            "hidden": true,
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceParentDir}/$env{TWBuildFolderName}/$env{TWIntFolderName}/${presetName}",
+            "environment": {
+                "TWHome": "D:/TW",
+                "TWPEnvHome": "D:/TW",
+                "TWWorkspaceFolderName": "Workspace",
+                "TWGenFolderName": "TWGen",
+                "TWToolsFolderName": "Tools",
+                "TWBuildFolderName": "Builds",
+                "TWIntFolderName": "TWInt",
+                "TWLibFolderName": "TWLib",
+                "TWBinFolderName": "TWBin",
+                "TWKERNELWindows": "0",
+                "TWSubKERNELWindows": "0",
+                "TWKERNELLinux": "0",
+                "TWSubKERNELLinux": "0",
+                "TWKERNELUniKernel": "0",
+                "TWSubKERNELUniKernel": "0",
+                "TWKERNELApple": "0",
+                "TWSubKERNELApple": "0",
+                "TWKERNELiOS": "0",
+                "TWSubKERNELiOS": "0",
+                "TWKERNELwatchOS": "0",
+                "TWSubKERNELwatchOS": "0",
+                "TWKERNELAndroid": "0",
+                "TWSubKERNELAndroid": "0",
+                "TWOSWindows": "0",
+                "TWOSLinux": "0",
+                "TWOSUniKernel": "0",
+                "TWOSMacOS": "0",
+                "TWOSiOS": "0",
+                "TWOSiPadOS": "0",
+                "TWOSwatchOS": "0",
+                "TWOStvOS": "0",
+                "TWOSAndroid_Phone": "0",
+                "TWOSAndroid_Tablet": "0",
+                "TWOSAndroid_Wearable": "0",
+                "TWOSAndroid_TV": "0",
+                "TWOSiOS_Simulator": "0",
+                "TWOSiPadOS_Simulator": "0",
+                "TWOSwatchOS_Simulator": "0",
+                "TWOStvOS_Simulator": "0",
+                "TWARCHx64": "0",
+                "TWARCHarm64": "0",
+                "TWARCHx86": "0",
+                "TWARCHarm": "0",
+                "TWConfigurationTypes": "Debug;Release;Metrics;Simulation;LogRelease;",
+                "TWBuildHome": "$env{TWHome}/$env{TWBuildFolderName}",
+                "TWToolsHome": "$env{TWHome}/$env{TWToolsFolderName}",
+                "TWWorkspaceHome": "$env{TWHome}/$env{TWWorkspaceFolderName}",
+                "TWQtHome": "$env{TWToolsHome}/Qt",
+                "TWBuildSupportSource": "$env{TWHome}/$env{TWWorkspaceFolderName}/TallyWorld/BuildSupportPlatform/TWBuildSupport.Source",
+                "TWQMLSourceFile": "$env{TWBuildSupportSource}/TWAdditionalSourceFiles/QtToolKitFiles/qml.qrc",
+                "TWQTOSDirName": "$env{TWBuildKERNEL}",
+                "DOXYGEN_BUILD": "0",
+                "MSVC_BUILD_ENABLED": "0",
+                "TWOSIsSimulator": "0",
+                "TWAllowQTBuild": "true",
+                "TWQTInstallDir": "$env{TWQtHome}/$env{TWQTOSDirName}-$env{TWBuildARCH}",
+                "TWOptionsListForMoc": "$env{TWCXXFlagsOSType} $env{TWCXXFlagsKernelType}",
+                "TWCXXFlagsDebug": "-DTW_CONFIG_DEBUG=1 -DTW_CONFIG_RELEASE=0 -DTW_CONFIG_SIMULATION=0 -DTW_CONFIG_METRICS=0 -DTW_CONFIG_LOGRELEASE=0 -DTW_CURRENT_BUILD_CONFIG=Debug $env{TWCXXFlagsCompilerTypeDebug}",
+                "TWCXXFlagsRelease": "-DTW_CONFIG_DEBUG=0 -DTW_CONFIG_RELEASE=1 -DTW_CONFIG_SIMULATION=0 -DTW_CONFIG_METRICS=0 -DTW_CONFIG_LOGRELEASE=0 -DTW_CURRENT_BUILD_CONFIG=Release $env{TWCXXFlagsCompilerTypeRelease}",
+                "TWCXXFlagsSimulation": "-DTW_CONFIG_DEBUG=0 -DTW_CONFIG_RELEASE=0 -DTW_CONFIG_SIMULATION=1 -DTW_CONFIG_METRICS=0 -DTW_CONFIG_LOGRELEASE=0 -DTW_CURRENT_BUILD_CONFIG=Simulation $env{TWCXXFlagsCompilerTypeRelease}",
+                "TWCXXFlagsMetrics": "-DTW_CONFIG_DEBUG=0 -DTW_CONFIG_RELEASE=0 -DTW_CONFIG_SIMULATION=0 -DTW_CONFIG_METRICS=1 -DTW_CONFIG_LOGRELEASE=0 -DTW_CURRENT_BUILD_CONFIG=Metrics $env{TWCXXFlagsCompilerTypeRelease}",
+                "TWCXXFlagsLogRelease": "-DTW_CONFIG_DEBUG=0 -DTW_CONFIG_RELEASE=0 -DTW_CONFIG_SIMULATION=0 -DTW_CONFIG_METRICS=0 -DTW_CONFIG_LOGRELEASE=1 -DTW_CURRENT_BUILD_CONFIG=LogRelease $env{TWCXXFlagsCompilerTypeRelease}",
+                "TWCXXFlagsKernelType": " -DTW_KERNEL_WINDOWS=$env{TWKERNELWindows} -DTW_KERNEL_UNIKERNEL=$env{TWKERNELUniKernel} -DTW_KERNEL_LINUX=$env{TWKERNELLinux}  -DTW_KERNEL_APPLE=$env{TWKERNELApple} -DTW_KERNEL_IOS=$env{TWKERNELiOS}  -DTW_KERNEL_WATCHOS=$env{TWKERNELwatchOS} -DTW_KERNEL_ANDROID=$env{TWKERNELAndroid} ",
+                "TWCXXFlagsSubKernelType": " -DTW_SUBKERNEL_LINUX=$env{TWSubKERNELLinux}  -DTW_SUBKERNEL_APPLE=$env{TWSubKERNELApple} -DTW_SUBKERNEL_IOS=$env{TWSubKERNELiOS} ",
+                "TWCXXFlagsOSType": " -DTW_OS_WINDOWS=$env{TWOSWindows} -DTW_OS_LINUX=$env{TWOSLinux} -DTW_OS_UNIKERNEL=$env{TWOSUniKernel} -DTW_OS_MACOS=$env{TWOSMacOS} -DTW_OS_IOS=$env{TWOSiOS} -DTW_OS_IPADOS=$env{TWOSiPadOS} -DTW_OS_WATCHOS=$env{TWOSwatchOS} -DTW_OS_TVOS=$env{TWOStvOS} -DTW_OS_ANDROID_PHONE=$env{TWOSAndroid_Phone} -DTW_OS_ANDROID_TABLET=$env{TWOSAndroid_Tablet} -DTW_OS_ANDROID_WEARABLE=$env{TWOSAndroid_Wearable} -DTW_OS_ANDROID_TV=$env{TWOSAndroid_TV} -DTW_CURRENT_BUILD_OS=$env{TWBuildOS} ",
+                "TWCXXFlagsArchType": " -DTW_ARCH_X64=$env{TWARCHx64} -DTW_ARCH_ARM64=$env{TWARCHarm64} -DTW_ARCH_X86=$env{TWARCHx86} -DTW_ARCH_ARM=$env{TWARCHarm} -DTW_CURRENT_BUILD_ARCH=$env{TWBuildARCH} ",
+                "TWCXXFlags": " -fstandalone-debug -Wall -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-old-style-cast -Wno-nested-anon-types -Wno-gnu-anonymous-struct -Wno-language-extension-token -Wno-gnu-zero-variadic-macro-arguments -Wno-format-nonliteral -Wno-zero-length-array -Wno-extra-semi -Wno-extra-semi-stmt -Wno-unknown-warning-option -Wno-invalid-utf8",
+                "TWAdditionalCompileFlagsForGtes": "-Wno-error -Wno-microsoft-cast",
+                "TWSwiftFlags": "",
+                "TWLinkerFlags": "",
+                "TWIsGoogleTestLibBuildEnabled": "OFF",
+                "TWGoogleTestVersion": "TallyGtest1.11",
+                "TWGoogleTestGitURL": "https://github.com/TallySolutions/googletest.git",
+                "TWGTestHome": "$env{TWToolsHome}/GoogleTest/$env{TWBuildKERNEL}/$env{TWBuildARCH}"
+            },
+            "cacheVariables": {
+                "CMAKE_MODULE_PATH": {
+                    "type": "FILEPATH",
+                    "value": "${sourceDir}/TallyWorld/BuildSupportPlatform/TWBuildSupport.Source/CMake"
+                },
+                "CMAKE_ARCHIVE_OUTPUT_DIRECTORY": {
+                    "type": "FILEPATH",
+                    "value": "${sourceParentDir}/$env{TWBuildFolderName}/$env{TWLibFolderName}/${presetName}"
+                },
+                "CMAKE_LIBRARY_OUTPUT_DIRECTORY": {
+                    "type": "FILEPATH",
+                    "value": "${sourceParentDir}/$env{TWBuildFolderName}/$env{TWLibFolderName}/${presetName}"
+                },
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": {
+                    "type": "FILEPATH",
+                    "value": "${sourceParentDir}/$env{TWBuildFolderName}/$env{TWBinFolderName}/${presetName}"
+                },
+                "CMAKE_INSTALL_PREFIX": {
+                    "type": "FILEPATH",
+                    "value": "${sourceParentDir}/$env{TWBuildFolderName}/$env{TWBinFolderName}/${presetName}"
+                },
+                "CMAKE_CONFIGURATION_TYPES": "$env{TWConfigurationTypes}",
+                "CMAKE_MESSAGE_LOG_LEVEL": "NOTICE",
+                "CMAKE_CXX_STANDARD": "20",
+                "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+                "CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH": "1",
+                "CMAKE_PCH_INSTANTIATE_TEMPLATES": "ON",
+                "CMAKE_SYSTEM_NAME": "$env{TWCMakeSystemName}",
+                "CMAKE_CXX_FLAGS": "$env{TWCXXFlags} $env{TWCXXFlagsKernelType} $env{TWCXXFlagsSubKernelType} $env{TWCXXFlagsOSType} $env{TWCXXFlagsArchType} $env{TWCXXFlagsTargetType} $env{TWCXXFlagsCompilerType}",
+                "CMAKE_CXX_FLAGS_RELEASE": "$env{TWCXXFlagsRelease} ",
+                "CMAKE_CXX_FLAGS_LOGRELEASE": "$env{TWCXXFlagsLogRelease} ",
+                "CMAKE_CXX_FLAGS_DEBUG": "$env{TWCXXFlagsDebug}  ",
+                "CMAKE_CXX_FLAGS_SIMULATION": "$env{TWCXXFlagsSimulation} ",
+                "CMAKE_CXX_FLAGS_METRICS": "$env{TWCXXFlagsMetrics} ",
+                "CMAKE_CXX_FLAGS_INTERNALRELEASE": "$env{TWCXXFlagsRelease} ",
+                "CMAKE_CXX_FLAGS_INTERNALLOGRELEASE": "$env{TWCXXFlagsLogRelease} ",
+                "CMAKE_CXX_FLAGS_INTERNALDEBUG": "$env{TWCXXFlagsDebug}  ",
+                "CMAKE_CXX_FLAGS_INTERNALSIMULATION": "$env{TWCXXFlagsSimulation} ",
+                "CMAKE_CXX_FLAGS_INTERNALMETRICS": "$env{TWCXXFlagsMetrics} ",
+                "CMAKE_CXX_FLAGS_ALPHARELEASE": "$env{TWCXXFlagsRelease} ",
+                "CMAKE_CXX_FLAGS_ALPHALOGRELEASE": "$env{TWCXXFlagsLogRelease} ",
+                "CMAKE_CXX_FLAGS_ALPHADEBUG": "$env{TWCXXFlagsDebug}  ",
+                "CMAKE_CXX_FLAGS_ALPHASIMULATION": "$env{TWCXXFlagsSimulation} ",
+                "CMAKE_CXX_FLAGS_ALPHAMETRICS": "$env{TWCXXFlagsMetrics} ",
+                "CMAKE_CXX_FLAGS_BETARELEASE": "$env{TWCXXFlagsRelease} ",
+                "CMAKE_CXX_FLAGS_BETALOGRELEASE": "$env{TWCXXFlagsLogRelease} ",
+                "CMAKE_CXX_FLAGS_BETASIMULATION": "$env{TWCXXFlagsSimulation} ",
+                "CMAKE_CXX_FLAGS_BETAMETRICS": "$env{TWCXXFlagsMetrics} ",
+                "CMAKE_CXX_FLAGS_GOLDRELEASE": "$env{TWCXXFlagsRelease} ",
+                "CMAKE_CXX_FLAGS_GOLDLOGRELEASE": "$env{TWCXXFlagsLogRelease} ",
+                "CMAKE_CXX_FLAGS_GOLDSIMULATION": "$env{TWCXXFlagsSimulation} ",
+                "CMAKE_CXX_FLAGS_GOLDMETRICS": "$env{TWCXXFlagsMetrics} ",
+                "CMAKE_EXE_LINKER_FLAGS": "$env{TWLinkerFlags} $env{TWLinkerArchFlag}",
+                "CMAKE_EXE_LINKER_FLAGS_RELEASE": "$env{TWLinkerFlagsRelease} ",
+                "CMAKE_EXE_LINKER_FLAGS_LOGRELEASE": "$env{TWLinkerFlagsLogRelease} ",
+                "CMAKE_EXE_LINKER_FLAGS_DEBUG": "$env{TWLinkerFlagsDebug} ",
+                "CMAKE_EXE_LINKER_FLAGS_SIMULATION": "$env{TWLinkerFlagsSimulation}",
+                "CMAKE_EXE_LINKER_FLAGS_METRICS": "$env{TWLinkerFlagsMetrics}",
+                "CMAKE_STATIC_LINKER_FLAGS": "$env{CMAKE_EXE_LINKER_FLAGS}",
+                "CMAKE_STATIC_LINKER_FLAGS_RELEASE": "",
+                "CMAKE_STATIC_LINKER_FLAGS_LOGRELEASE": "",
+                "CMAKE_STATIC_LINKER_FLAGS_DEBUG": "",
+                "CMAKE_STATIC_LINKER_FLAGS_SIMULATION": "",
+                "CMAKE_STATIC_LINKER_FLAGS_METRICS": ""
+            }
+        },
+        {
+            "name": "KERNELWindows",
+            "hidden": true,
+            "generator": "Visual Studio 17 2022",
+            "environment": {
+                "TWKERNELWindows": "1",
+                "TWBuildKERNEL": "Windows",
+                "TWToolsFolderName": "Tools",
+                "TWCMakeSystemName": "Windows",
+                "MSVC_BUILD_ENABLED": "1",
+                "TWCXXFlags": " /W4  /wd4201 /wd4200  /MP /Zc:__cplusplus /wd4624",
+                "TWLinkerFlags": "/ignore:4099",
+                "TWLinkerFlagsRelease": " /incremental ",
+                "TWLinkerFlagsLogRelease": "$env{TWLinkerFlagsRelease}",
+                "TWLinkerFlagsDebug": "/DEBUG /incremental ",
+                "TWLinkerFlagsSimulation": " $env{TWLinkerFlagsRelease}",
+                "TWLinkerFlagsMetrics": "$env{TWLinkerFlagsRelease}",
+                "TWCXXFlagsCompilerType": " /DNDEBUG /EHsc ",
+                "TWCXXFlagsCompilerTypeRelease": "/Ox /Ob2",
+                "TWCXXFlagsCompilerTypeDebug": "/Zi /Ob0 /Od /RTC1",
+                "TWCXXFlagsCompilerTypeSimulation": "$env{TWCXXFlagsCompilerTypeRelease}",
+                "TWCXXFlagsCompilerTypeMetrics": "$env{TWCXXFlagsCompilerTypeRelease}",
+                "TWWinMainEntrySourceFile": "$env{TWBuildSupportSource}/TWAdditionalSourceFiles/WindowsKernel/TWWinMainEntry.cpp",
+                "TWWinWinMainEntrySourceFile": "$env{TWBuildSupportSource}/TWAdditionalSourceFiles/WindowsKernel/TWWinWinMainEntry.cpp"
+            },
+            "cacheVariables": {
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded"
+            }
+        },
+        {
+            "name": "KERNELLinux",
+            "hidden": true,
+            "environment": {
+                "TWKERNELLinux": "1",
+                "TWBuildKERNEL": "Linux",
+                "TWHome": "$env{HOME}",
+                "TWToolsFolderName": "/usr/share",
+                "TWToolsHome": "$env{TWToolsFolderName}",
+                "TWCMakeSystemName": "Linux",
+                "TWCMakeCXXCompiler": "clang++",
+                "TWCMakeLinker": "lld-link",
+                "TWCMakeAR": "llvm-ar",
+                "TWCMakeRanLib": "llvm-ranlib",
+                "TWCXXFlagsCompilerType": "-DNDEBUG ",
+                "TWCXXFlagsCompilerTypeRelease": "-O3",
+                "TWCXXFlagsCompilerTypeDebug": "-O0 -g",
+                "TWCXXFlagsCompilerTypeSimulation": "$env{TWCXXFlagsCompilerTypeRelease}",
+                "TWCXXFlagsCompilerTypeMetrics": "$env{TWCXXFlagsCompilerTypeRelease}",
+                "TWLinkerFlagsRelease": "",
+                "TWLinkerFlagsDebug": "",
+                "TWLinkerFlagsSimulation": "",
+                "TWLinkerFlagsMetrics": ""
+            },
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": {
+                    "type": "FILEPATH",
+                    "value": "$env{TWCMakeCXXCompiler}"
+                },
+                "CMAKE_LINKER": {
+                    "type": "FILEPATH",
+                    "value": "$env{TWCMakeLinker}"
+                },
+                "CMAKE_AR": {
+                    "type": "FILEPATH",
+                    "value": "$env{TWCMakeAR}"
+                },
+                "CMAKE_RANLIB": {
+                    "type": "FILEPATH",
+                    "value": "$env{TWCMakeRanLib}"
+                }
+            }
+        },
+        {
+            "name": "KERNELUniKernel",
+            "hidden": true,
+            "inherits": [
+                "KERNELLinux"
+            ],
+            "environment": {
+                "TWKERNELUniKernel": "1",
+                "TWSubKERNELLinux": "1",
+                "TWBuildKERNEL": "UniKernel"
+            }
+        },
+        {
+            "name": "KERNELApple",
+            "hidden": true,
+            "inherits": [
+                "KERNELLinux"
+            ],
+            "environment": {
+                "TWKERNELApple": "1",
+                "TWSubKERNELLinux": "1",
+                "TWBuildKERNEL": "Apple",
+                "TWToolsFolderName": "/Users/Shared",
+                "TWCMakeSystemName": "Darwin",
+                "TWMacOSFWLibs": "-framework Cocoa;-framework CoreMedia;-framework CoreText;-framework ImageIO;-framework IOSurface;-framework Metal;-framework CoreVideo;-framework Carbon;-framework CoreGraphics;-framework QuartzCore;-framework AGL;-framework OpenGL;-framework SystemConfiguration;-framework Security;-framework CoreServices;-framework Foundation;-framework ApplicationServices;-framework CoreFoundation;-framework AppKit;-framework DiskArbitration;-framework IOKit;-framework Network  -ObjC",
+                "TWSwiftFlagsKernelApple": "-Xcc -DTW_KERNEL_APPLE -DTW_KERNEL_APPLE -Xcc -DTW_KERNEL_LINUX -DTW_KERNEL_LINUX -Xcc -DTW_SUBKERNEL_LINUX -DTW_SUBKERNEL_LINUX",
+                "AppleDevelopmentTeamID": "E5R2JZ6U5K",
+                "AppleCodeSignIdentity": "Apple Development",
+                "TWGTestHome": "$env{TWToolsHome}/GoogleTest/Apple/$env{TWBuildARCH}",
+                "TWMacOSMinSupportedVersion": "10.13",
+                "TWiOSMinSupportedVersion": "12.0",
+                "TWiPadOSMinSupportedVersion": "13.0",
+                "TWtvOSMinSupportedVersion": "12.0",
+                "TWwatchOSMinSupportedVersion": "7.0"
+            },
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": {
+                    "type": "FILEPATH",
+                    "value": "$env{TWBuildSupportSource}/CMake/ToolChains/ios.toolchain.cmake"
+                },
+                "CMAKE_Swift_LANGUAGE_VERSION": "5.0",
+                "CMAKE_XCODE_GENERATE_SCHEME": "true",
+                "ENABLE_BITCODE": "OFF",
+                "CMAKE_Swift_FLAGS": "$env{TWSwiftFlags} "
+            }
+        },
+        {
+            "name": "KERNELiOS",
+            "hidden": true,
+            "inherits": [
+                "KERNELApple"
+            ],
+            "environment": {
+                "TWKERNELiOS": "1",
+                "TWSubKERNELApple": "1",
+                "TWBuildKERNEL": "iOS",
+                "TWCMakeSystemName": "$env{TWOSBaseOS}",
+                "TWQTiOSAppDelegateFile": "$env{TWBuildSupportSource}/TWAdditionalSourceFiles/iOSKernel/WithQt/TWQtAppleUIKitAppDelegate.mm",
+                "TW_IOS_FW_LIBS": "-framework UIKit;-framework Foundation;-framework Network -ObjC",
+                "TWSwiftFlagsKerneliOS": "$env{TWSwiftFlagsKernelApple} -Xcc -DTW_KERNEL_IOS -DTW_KERNEL_IOS -Xcc -DTW_SUBKERNEL_APPLE -DTW_SUBKERNEL_APPLE ",
+                "TWQTOSDirName": "iOS",
+                "TWIsCodeSigningNeeded": "Yes"
+            },
+            "cacheVariables": {
+                "MACOSX_BUNDLE_ICON_FILE": "Assets.xcassets",
+                "ICONS": {
+                    "type": "FILEPATH",
+                    "value": "$env{TWBuildSupportSource}/TWAdditionalBuildFiles/iOSKernel/Assets.xcassets"
+                }
+            }
+        },
+        {
+            "name": "KERNELwatchOS",
+            "hidden": true,
+            "inherits": [
+                "KERNELApple"
+            ],
+            "environment": {
+                "TWKERNELwatchOS": "1",
+                "TWSubKERNELApple": "1",
+                "TWBuildKERNEL": "watchOS",
+                "TWCMakeSystemName": "$env{TWOSBaseOS}",
+                "TWWatchFWLibs": "-framework WatchKit;-framework Foundation",
+                "TWWatchOSEntryPoint": "-e _WKExtensionMain",
+                "TWSwiftFlagsKernelwatchOS": "$env{TWSwiftFlagsKernelApple} -Xcc -DTW_KERNEL_WATCHOS -DTW_KERNEL_WATCHOS -Xcc -DTW_SUBKERNEL_APPLE -DTW_SUBKERNEL_APPLE -Xcc -DTW_SUBKERNEL_WATCHOS -DTW_SUBKERNEL_WATCHOS",
+                "TWQTOSDirName": "iOS",
+                "TWIsCodeSigningNeeded": "Yes"
+            }
+        },
+        {
+            "name": "KERNELAndroid",
+            "hidden": true,
+            "inherits": [
+                "KERNELLinux"
+            ],
+            "environment": {
+                "TWKERNELAndroid": "1",
+                "TWSubKERNELLinux": "1",
+                "TWBuildKERNEL": "Android",
+                "TWHome": "$env{TWPEnvHome}",
+                "TWToolsFolderName": "Tools",
+                "TWToolsHome": "$env{TWHome}/$env{TWToolsFolderName}",
+                "TWAndroidNDK": "$env{TWToolsHome}/Android/NDK",
+                "TWCMakeCXXCompiler": "$env{TWAndroidNDK}/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe",
+                "TWCMakeLinker": "$env{TWHome}/$env{TWToolsFolderName}/Android/NDK/build/cmake/android.toolchain.cmake",
+                "TWCMakeAR": "$env{TWAndroidNDK}/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe",
+                "TWCMakeRanLib": "$env{TWAndroidNDK}/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ranlib.exe",
+                "TWCMakeSystemName": "Android",
+                "TWQTAndroidPackageSourceDir": "$env{TWBuildHome}/$env{TWIntFolderName}/$env{TWBuildOS}-$env{TWBuildARCH}/QtAndroidPackageSource",
+                "TWCXXFlagsCompilerType": "-DNDEBUG -fPIC",
+                "TWCXXFlagsCompilerTypeRelease": "-O3",
+                "TWCXXFlagsCompilerTypeDebug": "-O0 -g",
+                "TWCXXFlagsCompilerTypeSimulation": "$env{TWCXXFlagsCompilerTypeRelease}",
+                "TWCXXFlagsCompilerTypeMetrics": "$env{TWCXXFlagsCompilerTypeRelease}",
+                "TWLinkerFlags": "",
+                "TWLinkerFlagsRelease": "",
+                "TWLinkerFlagsDebug": "",
+                "TWLinkerFlagsSimulation": "",
+                "TWLinkerFlagsMetrics": "",
+                "TWAndroidJavaVersion": "1.8",
+                "TWAndroidSDKToolVersion": "32.0.0",
+                "TWAndroidAPILevel": "32",
+                "TWAndroidMinAPILevel": "23",
+                "TWAndroidGradleVersion": "7.2",
+                "TWGradlePluginVersion": "7.1.1"
+            },
+            "cacheVariables": {
+                "ANDROID_SDK_ROOT": "$env{TWHome}/$env{TWToolsFolderName}/Android/SDK",
+                "ANDROID_NDK": "$env{TWHome}/$env{TWToolsFolderName}/Android/NDK",
+                "ANDROID_TOOLCHAIN": "clang",
+                "CMAKE_TOOLCHAIN_FILE": {
+                    "type": "FILEPATH",
+                    "value": "$env{TWHome}/$env{TWToolsFolderName}/Android/NDK/build/cmake/android.toolchain.cmake"
+                },
+                "ANDROID_PLATFORM": "$env{TWAndroidMinAPILevel}"
+            }
+        },
+        {
+            "name": "OSWindows",
+            "hidden": true,
+            "inherits": [
+                "KERNELWindows"
+            ],
+            "environment": {
+                "TWOSWindows": "1",
+                "TWBuildOS": "Windows"
+            }
+        },
+        {
+            "name": "OSLinux",
+            "hidden": true,
+            "inherits": [
+                "KERNELLinux"
+            ],
+            "environment": {
+                "TWOSLinux": "1",
+                "TWBuildOS": "Linux",
+                "TWQTOSDirName": "Linux",
+                "TWLinkerArchFlag": "-no-pie"
+            }
+        },
+        {
+            "name": "OSUniKernel",
+            "hidden": true,
+            "inherits": [
+                "KERNELUniKernel"
+            ],
+            "environment": {
+                "TWOSUniKernel": "1",
+                "TWBuildOS": "UniKernel",
+                "TWQTOSDirName": "Linux"
+            }
+        },
+        {
+            "name": "OSMacOS",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELApple"
+            ],
+            "environment": {
+                "TWOSMacOS": "1",
+                "TWBuildOS": "MacOS",
+                "TWOSBaseOS": "MacOS",
+                "IOS_PLATFORM": "OS",
+                "TWQTOSDirName": "$env{TWBuildOS}",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKernelApple} -Xcc -DTW_OS_MACOS -DTW_OS_MACOS"
+            }
+        },
+        {
+            "name": "OSiOS",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELiOS"
+            ],
+            "environment": {
+                "TWOSiOS": "1",
+                "TWBuildOS": "iOS",
+                "TWOSBaseOS": "iOS",
+                "TWPlatformSDKName": "iPhoneOS",
+                "IOS_PLATFORM": "OS",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKerneliOS} -Xcc -DTW_OS_IOS -DTW_OS_IOS"
+            }
+        },
+        {
+            "name": "OSiPadOS",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELiOS"
+            ],
+            "environment": {
+                "TWOSiPadOS": "1",
+                "TWBuildOS": "iPadOS",
+                "TWOSBaseOS": "iOS",
+                "TWPlatformSDKName": "iPhoneOS",
+                "IOS_PLATFORM": "OS",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKerneliOS} -Xcc -DTW_OS_IPADOS -DTW_OS_IPADOS"
+            }
+        },
+        {
+            "name": "OSwatchOS",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELwatchOS"
+            ],
+            "environment": {
+                "TWOSwatchOS": "1",
+                "TWBuildOS": "watchOS",
+                "TWOSBaseOS": "watchOS",
+                "TWPlatformSDKName": "WatchOS",
+                "IOS_PLATFORM": "OS",
+                "TWAllowQTBuild": "false",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKernelwatchOS} -Xcc -DTW_OS_WATCHOS -DTW_OS_WATCHOS"
+            }
+        },
+        {
+            "name": "OStvOS",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELiOS"
+            ],
+            "environment": {
+                "TWOStvOS": "1",
+                "TWBuildOS": "tvOS",
+                "TWOSBaseOS": "tvOS",
+                "TWPlatformSDKName": "AppleTVOS",
+                "IOS_PLATFORM": "OS",
+                "TWAllowQTBuild": "false",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKerneliOS} -Xcc -DTW_OS_TVOS -DTW_OS_TVOS"
+            }
+        },
+        {
+            "name": "OSAndroid_Phone",
+            "hidden": true,
+            "inherits": [
+                "KERNELAndroid"
+            ],
+            "environment": {
+                "TWOSAndroid_Phone": "1",
+                "TWBuildOS": "Android_Phone"
+            }
+        },
+        {
+            "name": "OSAndroid_Tablet",
+            "hidden": true,
+            "inherits": [
+                "KERNELAndroid"
+            ],
+            "environment": {
+                "TWOSAndroid_Tablet": "1",
+                "TWBuildOS": "Android_Tablet"
+            }
+        },
+        {
+            "name": "OSAndroid_Wearable",
+            "hidden": true,
+            "inherits": [
+                "KERNELAndroid"
+            ],
+            "environment": {
+                "TWOSAndroid_Wearable": "1",
+                "TWBuildOS": "Android_Wearable"
+            }
+        },
+        {
+            "name": "OSAndroid_TV",
+            "hidden": true,
+            "inherits": [
+                "KERNELAndroid"
+            ],
+            "environment": {
+                "TWOSAndroid_TV": "1",
+                "TWBuildOS": "Android_TV"
+            }
+        },
+        {
+            "name": "OSiOS_Simulator",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELiOS"
+            ],
+            "environment": {
+                "TWOSiOS_Simulator": "1",
+                "TWBuildOS": "iOS_Simulator",
+                "TWOSiOS": "1",
+                "TWOSIsSimulator": "1",
+                "TWQTOSDirName": "iOS_Simulator",
+                "TWIsCodeSigningNeeded": "No",
+                "TWOSBaseOS": "iOS",
+                "TWPlatformSDKName": "iPhoneSimulator",
+                "IOS_PLATFORM": "SIMULATOR",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKerneliOS} -Xcc -DTW_OS_IOS_SIMULATOR -DTW_OS_IOS_SIMULATOR"
+            }
+        },
+        {
+            "name": "OSiPadOS_Simulator",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELiOS"
+            ],
+            "environment": {
+                "TWOSiPadOS_Simulator": "1",
+                "TWBuildOS": "iPadOS_Simulator",
+                "TWOSIsSimulator": "1",
+                "TWQTOSDirName": "iOS_Simulator",
+                "TWIsCodeSigningNeeded": "No",
+                "TWOSiPadOS": "1",
+                "TWOSBaseOS": "iOS",
+                "TWPlatformSDKName": "iPhoneSimulator",
+                "IOS_PLATFORM": "SIMULATOR",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKerneliOS} -Xcc -DTW_OS_IPADOS_SIMULATOR -DTW_OS_IPADOS_SIMULATOR"
+            }
+        },
+        {
+            "name": "OSwatchOS_Simulator",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELwatchOS"
+            ],
+            "environment": {
+                "TWOSwatchOS_Simulator": "1",
+                "TWBuildOS": "watchOS_Simulator",
+                "TWOSwatchOS": "1",
+                "TWOSIsSimulator": "1",
+                "TWQTOSDirName": "iOS_Simulator",
+                "TWIsCodeSigningNeeded": "No",
+                "TWOSBaseOS": "watchOS",
+                "TWPlatformSDKName": "WatchSimulator",
+                "IOS_PLATFORM": "SIMULATOR",
+                "TWAllowQTBuild": "false",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKernelwatchOS} -Xcc -DTW_OS_WATCHOS_SIMULATOR -DTW_OS_WATCHOS_SIMULATOR"
+            }
+        },
+        {
+            "name": "OStvOS_Simulator",
+            "hidden": true,
+            "generator": "Xcode",
+            "inherits": [
+                "KERNELiOS"
+            ],
+            "environment": {
+                "TWOStvOS_Simulator": "1",
+                "TWBuildOS": "tvOS_Simulator",
+                "TWOStvOS": "1",
+                "TWOSIsSimulator": "1",
+                "TWQTOSDirName": "iOS_Simulator",
+                "TWIsCodeSigningNeeded": "No",
+                "TWOSBaseOS": "tvOS",
+                "TWPlatformSDKName": "AppleTVSimulator",
+                "IOS_PLATFORM": "SIMULATOR",
+                "TWAllowQTBuild": "false",
+                "TWSwiftFlags": "$env{TWSwiftFlagsKerneliOS} -Xcc -DTW_OS_TVOS_SIMULATOR -DTW_OS_TVOS_SIMULATOR"
+            }
+        },
+        {
+            "name": "ARCHx64",
+            "hidden": true,
+            "environment": {
+                "TWARCHx64": "1",
+                "TWBuildARCH": "x64"
+            }
+        },
+        {
+            "name": "ARCHarm64",
+            "hidden": true,
+            "architecture": {
+                "strategy": "external",
+                "value": "arm64"
+            },
+            "environment": {
+                "TWARCHarm64": "1",
+                "TWBuildARCH": "arm64"
+            }
+        },
+        {
+            "name": "PRESETKERNELWindows-ARCHx64",
+            "hidden": true,
+            "environment": {
+                "TWLinkerArchFlag": "/machine:x64"
+            }
+        },
+        {
+            "name": "PRESETKERNELWindows-ARCHarm64",
+            "hidden": true,
+            "environment": {
+                "TWLinkerArchFlag": "/machine:arm64",
+                "TWCXXFlagsTargetType": "--target=arm64-pc-windows-msvc"
+            }
+        },
+        {
+            "name": "PRESETKERNELWindows-ARCHx86",
+            "hidden": true,
+            "environment": {
+                "TWLinkerArchFlag": "/machine:x86",
+                "TWCXXFlagsTargetType": "--target=x86_32-pc-windows-msvc"
+            }
+        },
+        {
+            "name": "PRESETKERNELWindows-ARCHarm",
+            "hidden": true,
+            "environment": {
+                "TWLinkerArchFlag": "/machine:arm",
+                "TWCXXFlagsTargetType": "--target=arm32-pc-windows-msvc"
+            }
+        },
+        {
+            "name": "PRESETKERNELLinux-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "CMAKE_SYSTEM_PROCESSOR": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETKERNELLinux-ARCHarm64",
+            "hidden": true,
+            "environment": {
+                "TWCXXFlagsTargetType": " --target=aarch64-linux-gnu"
+            },
+            "cacheVariables": {
+                "CMAKE_SYSTEM_PROCESSOR": "$env{TWBuildARCH}"
+            }
+        },
+        {
+            "name": "PRESETKERNELLinux-ARCHx86",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "CMAKE_SYSTEM_PROCESSOR": "$env{TWBuildARCH}"
+            }
+        },
+        {
+            "name": "PRESETKERNELLinux-ARCHarm",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "CMAKE_SYSTEM_PROCESSOR": "arm32"
+            }
+        },
+        {
+            "name": "PRESETKERNELApple-ARCHarm64",
+            "hidden": true,
+            "environment": {
+                "TWCXXFlagsTargetType": ""
+            }
+        },
+        {
+            "name": "PRESETKERNELiOS-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            }
+        },
+        {
+            "name": "PRESETKERNELAndroid-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "ANDROID_ABI": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETKERNELAndroid-ARCHarm64",
+            "hidden": true,
+            "environment": {
+                "TWCXXFlagsTargetType": ""
+            },
+            "cacheVariables": {
+                "ANDROID_ABI": "arm64-v8a",
+                "CMAKE_SYSTEM_PROCESSOR": "aarch64"
+            }
+        },
+        {
+            "name": "PRESETKERNELAndroid-ARCHx86",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "ANDROID_ABI": "x86"
+            }
+        },
+        {
+            "name": "PRESETKERNELAndroid-ARCHarm",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "ANDROID_ABI": "armeabi-v7a"
+            }
+        },
+        {
+            "name": "PRESETOSLinux-ARCHarm64",
+            "hidden": true,
+            "environment": {
+                "TWAllowQTBuild": "false"
+            }
+        },
+        {
+            "name": "PRESETOSUniKernel-ARCHarm64",
+            "hidden": true,
+            "environment": {
+                "TWAllowQTBuild": "false"
+            }
+        },
+        {
+            "name": "PRESETOSMacOS-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "MAC",
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOSMacOS-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "MAC_ARM64",
+                "ARCHS": "arm64"
+            }
+        },
+        {
+            "name": "PRESETOSiOS-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "OS",
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOSiOS-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "OS64",
+                "ARCHS": "arm64"
+            }
+        },
+        {
+            "name": "PRESETOSiPadOS-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "OS",
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOSiPadOS-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "OS64",
+                "ARCHS": "arm64"
+            }
+        },
+        {
+            "name": "PRESETOSwatchOS-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOSwatchOS-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "ARCHS": "arm64",
+                "PLATFORM": "WATCHOS"
+            }
+        },
+        {
+            "name": "PRESETOStvOS-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOStvOS-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "ARCHS": "arm64",
+                "PLATFORM": "TVOS"
+            }
+        },
+        {
+            "name": "PRESETOSiOS_Simulator-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATOR64",
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOSiOS_Simulator-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATORARM64",
+                "ARCHS": "arm64"
+            }
+        },
+        {
+            "name": "PRESETOSiPadOS_Simulator-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATOR64",
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOSiPadOS_Simulator-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATORARM64",
+                "ARCHS": "arm64"
+            }
+        },
+        {
+            "name": "PRESETOSwatchOS_Simulator-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATOR_WATCHOS",
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOSwatchOS_Simulator-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATOR_WATCHOS",
+                "ARCHS": "arm64"
+            }
+        },
+        {
+            "name": "PRESETOStvOS_Simulator-ARCHx64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATOR_TVOS",
+                "ARCHS": "x86_64"
+            }
+        },
+        {
+            "name": "PRESETOStvOS_Simulator-ARCHarm64",
+            "hidden": true,
+            "environment": {
+
+            },
+            "cacheVariables": {
+                "PLATFORM": "SIMULATOR_TVOS",
+                "ARCHS": "arm64"
+            }
+        },
+        {
+            "name": "DoxyGen",
+            "generator": "Ninja Multi-Config",
+            "binaryDir": "${sourceParentDir}/$env{TWBuildFolderName}/$env{TWIntFolderName}/${presetName}",
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+
+                }
+            },
+            "environment": {
+                "TWHome": "D:/TW",
+                "TWPEnvHome": "D:/TW",
+                "TWWorkspaceFolderName": "Workspace",
+                "TWGenFolderName": "TWGen",
+                "TWToolsFolderName": "Tools",
+                "TWBuildFolderName": "Builds",
+                "TWIntFolderName": "TWInt",
+                "TWLibFolderName": "TWLib",
+                "TWBinFolderName": "TWBin",
+                "TWBuildHome": "$env{TWHome}/$env{TWBuildFolderName}",
+                "TWToolsHome": "$env{TWHome}/$env{TWToolsFolderName}",
+                "TWWorkspaceHome": "$env{TWHome}/$env{TWWorkspaceFolderName}",
+                "TWBuildSupportSource": "$env{TWHome}/$env{TWWorkspaceFolderName}/TallyWorld/BuildSupportPlatform/TWBuildSupport.Source",
+                "DOXYGEN_BUILD": "1"
+            },
+            "cacheVariables": {
+                "CMAKE_MODULE_PATH": {
+                    "type": "FILEPATH",
+                    "value": "${sourceDir}/TallyWorld/BuildSupportPlatform/TWBuildSupport.Source/CMake"
+                },
+                "CMAKE_INSTALL_PREFIX": {
+                    "type": "FILEPATH",
+                    "value": "${sourceParentDir}/$env{TWBuildFolderName}/$env{TWBinFolderName}/${presetName}"
+                },
+                "DOXYGEN_USE_MDFILE_AS_MAINPAGE": "${sourceDir}/README.md",
+                "DOXYGEN_PROJECT_BRIEF": "TallyWorld Tech",
+                "DOXYGEN_PROJECT_LOGO": "$env{TWBuildSupportSource}/TWDoxygen/tally.png",
+                "DOXYGEN_GENERATE_LATEX": "NO",
+                "DOXYGEN_EXTRACT_ALL": "NO",
+                "DOXYGEN_ENABLED_SECTIONS": "TALLYWORLD_DOX",
+                "DOXYGEN_LAYOUT_FILE": "$env{TWBuildSupportSource}/TWDoxygen/DoxygenLayout.xml",
+                "DOXYGEN_EXTRACT_PRIVATE": "YES",
+                "DOXYGEN_WARN_LOGFILE": "warnings.log",
+                "DOXYGEN_EXTRACT_PACKAGE": "YES",
+                "DOXYGEN_EXTRACT_STATIC": "YES",
+                "DOXYGEN_WARN_NO_PARAMDOC": "YES",
+                "DOXYGEN_HTML_OUTPUT": "html",
+                "DOXYGEN_FILE_PATTERNS": "*.c *.cc *.cxx *.cpp *.c++ *.ii *.ixx *.ipp *.i++ *.inl *.h *.hh *.hxx *.hpp *.h++ *.inc *.mm README.md",
+                "DOXYGEN_HTML_HEADER": "$env{TWBuildSupportSource}/TWDoxygen/new_header.html",
+                "CMAKE_CONFIGURATION_TYPES": "DoxyGen"
+            }
+        },
+        {
+            "name": "Windows-x64",
+            "inherits": [
+                "PRESETKERNELWindows-ARCHx64",
+                "OSWindows",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows",
+                    "intelliSenseMode": "windows-clang-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+
+                }
+            }
+        },
+        {
+            "name": "Windows-arm64",
+            "inherits": [
+                "PRESETKERNELWindows-ARCHarm64",
+                "OSWindows",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows",
+                    "intelliSenseMode": "windows-clang-arm64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+
+                }
+            }
+        },
+        {
+            "name": "Linux-x64",
+            "inherits": [
+                "PRESETKERNELLinux-ARCHx64",
+                "OSLinux",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Linux",
+                    "intelliSenseMode": "linux-gcc-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Linux-arm64",
+            "inherits": [
+                "PRESETOSLinux-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSLinux",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Linux"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "UniKernel-x64",
+            "inherits": [
+                "PRESETKERNELLinux-ARCHx64",
+                "OSUniKernel",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Linux",
+                    "intelliSenseMode": "linux-gcc-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "UniKernel-arm64",
+            "inherits": [
+                "PRESETOSUniKernel-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSUniKernel",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Linux"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "MacOS-x64",
+            "inherits": [
+                "PRESETOSMacOS-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OSMacOS",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "linux-gcc-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "MacOS-arm64",
+            "inherits": [
+                "PRESETOSMacOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSMacOS",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "iOS-arm64",
+            "inherits": [
+                "PRESETOSiOS-ARCHarm64",
+                "PRESETKERNELiOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSiOS",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-arm64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "iPadOS-arm64",
+            "inherits": [
+                "PRESETOSiPadOS-ARCHarm64",
+                "PRESETKERNELiOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSiPadOS",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-arm64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "watchOS-arm64",
+            "inherits": [
+                "PRESETOSwatchOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSwatchOS",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "tvOS-arm64",
+            "inherits": [
+                "PRESETOStvOS-ARCHarm64",
+                "PRESETKERNELiOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OStvOS",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-arm64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Android_Phone-x64",
+            "inherits": [
+                "PRESETKERNELAndroid-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OSAndroid_Phone",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows",
+                    "intelliSenseMode": "linux-gcc-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Android_Phone-arm64",
+            "inherits": [
+                "PRESETKERNELAndroid-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSAndroid_Phone",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Android_Tablet-x64",
+            "inherits": [
+                "PRESETKERNELAndroid-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OSAndroid_Tablet",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows",
+                    "intelliSenseMode": "linux-gcc-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Android_Tablet-arm64",
+            "inherits": [
+                "PRESETKERNELAndroid-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSAndroid_Tablet",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Android_Wearable-arm64",
+            "inherits": [
+                "PRESETKERNELAndroid-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSAndroid_Wearable",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Android_TV-x64",
+            "inherits": [
+                "PRESETKERNELAndroid-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OSAndroid_TV",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows",
+                    "intelliSenseMode": "linux-gcc-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Android_TV-arm64",
+            "inherits": [
+                "PRESETKERNELAndroid-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSAndroid_TV",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "Windows"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "iOS_Simulator-x64",
+            "inherits": [
+                "PRESETOSiOS_Simulator-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OSiOS_Simulator",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "iOS_Simulator-arm64",
+            "inherits": [
+                "PRESETOSiOS_Simulator-ARCHarm64",
+                "PRESETKERNELiOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSiOS_Simulator",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-arm64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "iPadOS_Simulator-x64",
+            "inherits": [
+                "PRESETOSiPadOS_Simulator-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OSiPadOS_Simulator",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "iPadOS_Simulator-arm64",
+            "inherits": [
+                "PRESETOSiPadOS_Simulator-ARCHarm64",
+                "PRESETKERNELiOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSiPadOS_Simulator",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-arm64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "watchOS_Simulator-x64",
+            "inherits": [
+                "PRESETOSwatchOS_Simulator-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OSwatchOS_Simulator",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "linux-gcc-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "watchOS_Simulator-arm64",
+            "inherits": [
+                "PRESETOSwatchOS_Simulator-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OSwatchOS_Simulator",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "tvOS_Simulator-x64",
+            "inherits": [
+                "PRESETOStvOS_Simulator-ARCHx64",
+                "PRESETKERNELLinux-ARCHx64",
+                "OStvOS_Simulator",
+                "ARCHx64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-x64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "tvOS_Simulator-arm64",
+            "inherits": [
+                "PRESETOStvOS_Simulator-ARCHarm64",
+                "PRESETKERNELiOS-ARCHarm64",
+                "PRESETKERNELApple-ARCHarm64",
+                "PRESETKERNELLinux-ARCHarm64",
+                "OStvOS_Simulator",
+                "ARCHarm64",
+                "Default"
+            ],
+            "vendor": {
+                "microsoft.com/VisualStudioSettings/CMake/1.0": {
+                    "hostOS": "macOS",
+                    "intelliSenseMode": "ios-clang-arm64"
+                },
+                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
+                    "sourceDir": "$env{HOME}/Workspace",
+                    "rsyncCommandArgs": [
+                        "-t",
+                        "--delete",
+                        "--exclude=.favourites",
+                        "--exclude=_clang-format",
+                        "-W"
+                    ]
+                }
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "STAGEDevelopment",
+            "hidden": true
+        },
+        {
+            "name": "STAGEInternal",
+            "hidden": true
+        },
+        {
+            "name": "STAGEAlpha",
+            "hidden": true
+        },
+        {
+            "name": "STAGEBeta",
+            "hidden": true
+        },
+        {
+            "name": "STAGEGold",
+            "hidden": true
+        },
+        {
+            "name": "CONFIGDebug",
+            "hidden": true
+        },
+        {
+            "name": "CONFIGRelease",
+            "hidden": true
+        },
+        {
+            "name": "CONFIGMetrics",
+            "hidden": true
+        },
+        {
+            "name": "CONFIGSimulation",
+            "hidden": true
+        },
+        {
+            "name": "CONFIGLogRelease",
+            "hidden": true
+        },
+        {
+            "name": "DoxyGen-DoxyGen",
+            "displayName": "DoxyGen",
+            "configuration": "DoxyGen",
+            "configurePreset": "DoxyGen"
+        },
+        {
+            "name": "Windows-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Windows-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Windows-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Windows-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Windows-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Windows-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Windows-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Windows-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Windows-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Windows-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Windows-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Windows-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Windows-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Windows-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Windows-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Windows-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Windows-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Windows-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Windows-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Windows-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Linux-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Linux-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Linux-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Linux-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Linux-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Linux-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Linux-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Linux-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Linux-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Linux-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Linux-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Linux-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Linux-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Linux-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Linux-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Linux-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Linux-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Linux-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Linux-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Linux-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "UniKernel-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "UniKernel-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "UniKernel-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "UniKernel-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "UniKernel-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "UniKernel-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "UniKernel-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "UniKernel-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "UniKernel-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "UniKernel-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "UniKernel-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "UniKernel-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "UniKernel-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "UniKernel-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "UniKernel-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "UniKernel-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "UniKernel-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "UniKernel-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "UniKernel-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "UniKernel-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "MacOS-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "MacOS-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "MacOS-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "MacOS-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "MacOS-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "MacOS-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "MacOS-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "MacOS-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "MacOS-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "MacOS-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "MacOS-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "MacOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "MacOS-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "MacOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "MacOS-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "MacOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "MacOS-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "MacOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "MacOS-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "MacOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "iOS-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "iOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "iOS-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "iOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "iOS-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "iOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "iOS-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "iOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "iOS-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "iOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "iPadOS-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "iPadOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "iPadOS-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "iPadOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "iPadOS-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "iPadOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "iPadOS-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "iPadOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "iPadOS-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "iPadOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "watchOS-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "watchOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "watchOS-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "watchOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "watchOS-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "watchOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "watchOS-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "watchOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "watchOS-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "watchOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "tvOS-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "tvOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "tvOS-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "tvOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "tvOS-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "tvOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "tvOS-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "tvOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "tvOS-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "tvOS-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Android_Phone-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Android_Phone-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Android_Phone-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Android_Phone-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Android_Phone-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Android_Phone-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Android_Phone-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Android_Phone-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Android_Phone-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Android_Phone-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Android_Phone-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Android_Phone-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Android_Phone-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Android_Phone-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Android_Phone-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Android_Phone-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Android_Phone-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Android_Phone-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Android_Phone-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Android_Phone-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Android_Tablet-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Android_Tablet-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Android_Tablet-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Android_Tablet-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Android_Tablet-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Android_Tablet-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Android_Tablet-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Android_Tablet-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Android_Tablet-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Android_Tablet-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Android_Tablet-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Android_Tablet-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Android_Tablet-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Android_Tablet-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Android_Tablet-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Android_Tablet-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Android_Tablet-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Android_Tablet-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Android_Tablet-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Android_Tablet-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Android_Wearable-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Android_Wearable-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Android_Wearable-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Android_Wearable-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Android_Wearable-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Android_Wearable-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Android_Wearable-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Android_Wearable-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Android_Wearable-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Android_Wearable-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Android_TV-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Android_TV-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Android_TV-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Android_TV-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Android_TV-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Android_TV-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Android_TV-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Android_TV-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Android_TV-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Android_TV-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "Android_TV-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "Android_TV-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "Android_TV-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "Android_TV-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "Android_TV-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "Android_TV-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "Android_TV-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "Android_TV-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "Android_TV-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "Android_TV-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "iOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "iOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "iOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "iOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "iOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "iOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "iOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "iOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "iOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "iOS_Simulator-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "iOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "iPadOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "iPadOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "iPadOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "iPadOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "iPadOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "iPadOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "iPadOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "iPadOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "iPadOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "iPadOS_Simulator-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "iPadOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "watchOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "watchOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "watchOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "watchOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "watchOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "watchOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "watchOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "watchOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "watchOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "watchOS_Simulator-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "watchOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-x64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "tvOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-x64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "tvOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-x64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "tvOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-x64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "tvOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-x64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "tvOS_Simulator-x64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-arm64-Debug",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "tvOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGDebug"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-arm64-Release",
+            "displayName": "Release",
+            "configuration": "Release",
+            "configurePreset": "tvOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGRelease"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-arm64-Metrics",
+            "displayName": "Metrics",
+            "configuration": "Metrics",
+            "configurePreset": "tvOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGMetrics"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-arm64-Simulation",
+            "displayName": "Simulation",
+            "configuration": "Simulation",
+            "configurePreset": "tvOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGSimulation"
+            ]
+        },
+        {
+            "name": "tvOS_Simulator-arm64-LogRelease",
+            "displayName": "LogRelease",
+            "configuration": "LogRelease",
+            "configurePreset": "tvOS_Simulator-arm64",
+            "inherits": [
+                "STAGEDevelopment",
+                "CONFIGLogRelease"
+            ]
+        }
+    ]
+}
